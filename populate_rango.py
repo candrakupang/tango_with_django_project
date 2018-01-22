@@ -51,4 +51,17 @@ def add_cat(name,views=0,likes=0):
 if __name__ == '__main__':
 	print("Starting Rango population script...")
 	populate()
-
+	print("update category views and likes value .......... ")
+	c = Category.objects.get(name='Python')
+	c.views = 128
+	c.likes = 64
+	c.save()
+	c = Category.objects.get(name='Django')
+	c.views = 64
+	c.likes = 32
+	c.save()
+	c = Category.objects.get(name='Other Frameworks')
+	c.views = 32
+	c.likes = 16
+	c.save()
+	
